@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "start": "http-server ./dist",
-    "build": "rm -rf dist && mkdir dist && cp -r src/assets dist && stylus src/css/style.styl --out dist/css/bundle.css --compress && cp -r src/js dist && cp src/index.html dist",
+    "build": "rm -rf dist && mkdir dist && cp -r src/assets dist && stylus src/css/style.styl --out dist/css/bundle.css --compress && tsc src/js/app.ts --outFile dist/js/bundle.js && cp src/index.html dist",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "stylelint src/css/**/*.css && eslint ./src/js",
     "style:lint": "stylelint src/css/**/*.css",
@@ -17,6 +17,9 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/cli": "^7.15.7",
+    "@babel/core": "^7.15.8",
+    "@babel/preset-env": "^7.15.8",
     "@typescript-eslint/eslint-plugin": "^4.33.0",
     "@typescript-eslint/parser": "^4.33.0",
     "eslint": "^7.2.0",
