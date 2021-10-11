@@ -11,7 +11,8 @@
     "style:lint": "stylelint src/css/**/*.css",
     "style:fix": "stylelint src/css/**/*.css --fix",
     "js:lint": "eslint ./src/js",
-    "js:fix": "eslint ./src/js --fix"
+    "js:fix": "eslint ./src/js --fix",
+    "prepare": "husky install"
   },
   "keywords": [],
   "author": "",
@@ -26,6 +27,7 @@
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.22.1",
     "http-server": "^13.0.2",
+    "husky": "^7.0.2",
     "stylelint": "^13.13.1",
     "stylelint-config-standard": "^22.0.0"
   },
