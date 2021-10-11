@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "start": "http-server ./dist",
-    "build": "rm -rf dist && mkdir dist && cp -r src/assets dist && cp -r src/css dist && cp -r src/js dist && cp src/index.html dist",
+    "build": "rm -rf dist && mkdir dist && cp -r src/assets dist && stylus src/css/style.styl --out dist/css/bundle.css --compress && cp -r src/js dist && cp src/index.html dist",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "stylelint src/css/**/*.css && eslint ./src/js",
     "style:lint": "stylelint src/css/**/*.css",
@@ -27,6 +27,7 @@
     "stylelint-config-standard": "^22.0.0"
   },
   "dependencies": {
+    "stylus": "^0.55.0",
     "typescript": "^4.4.3"
   }
 }
