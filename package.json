@@ -7,9 +7,9 @@
     "start": "http-server ./dist",
     "build": "rm -rf dist && mkdir dist && cp -r src/assets dist && stylus src/css/style.styl --out dist/css/bundle.css --compress && tsc src/js/app.ts --outFile dist/js/bundle.js && cp src/index.html dist",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "stylelint src/css/**/*.css && eslint ./src/js",
-    "style:lint": "stylelint src/css/**/*.css",
-    "style:fix": "stylelint src/css/**/*.css --fix",
+    "lint": "stylelint src/css/**/*.styl && eslint ./src/js",
+    "style:lint": "stylelint src/css/**/*.styl",
+    "style:fix": "stylelint src/css/**/*.styl --fix",
     "js:lint": "eslint ./src/js",
     "js:fix": "eslint ./src/js --fix",
     "prepare": "husky install"
