@@ -1,3 +1,7 @@
+import { test } from './test/test';
+
+import '../css/style.styl';
+
 window.addEventListener('load', () => {
   const imgElems = document.querySelectorAll<HTMLImageElement>('.logged-image');
   for (let i = 0, len = imgElems.length; i < len; i++) {
@@ -10,3 +14,5 @@ window.addEventListener('load', () => {
     }
   }
 });
+
+test();
